@@ -465,10 +465,73 @@ public:
 };
 
 
+template <unsigned int _dimention> 
 class VectorNf
 {
-	// N-dimentional vector
+public:
+
+	const unsigned int dimention;
+
+	float* v;
+
+
+	// Constructors
+
+	VectorNf() : dimention(_dimention)
+	{
+		//v = (float*)malloc(sizeof(float)*dimention);
+		v = new float[dimention];
+		memset(v, 0, sizeof(float)*dimention);
+	}
+
+	VectorNf(const VectorNf &copy) : dimention(copy.dimention)
+	{
+		//v = (float*)malloc(sizeof(float)*copy.dimention);
+		v = new float[copy.dimention];
+		memset(v, 0, sizeof(float)*dimention);
+		for(unsigned int i = 0; i < copy.dimention; i++)
+		{
+			v[i] = copy.v[i];
+		}
+	}
+
+
+	// Destructor
+
+	~VectorNf()
+	{
+		delete[] v;
+		//free(v);
+	}
+
+	
+	// Copy
+
+	VectorNf& operator = (const VectorNf &vec)
+	{
+		for(unsigned int i = 0; i < dimention; i++)
+		{
+			v[i] = vec.v[i];
+		}
+		return *this;
+	}
+
+
+	// Unary operators
+ 
+	VectorNf& operator + () { return *this; }
+
+	VectorNf operator - ()
+	{
+		VectorNf<_dimention> rVec;
+		for(unsigned int i = 0; i < dimention; i++)
+		{
+			rVec.v[i] = -v[i];
+		}
+		return rVec;
+	}
 };
+
 
 
 Vector3f cross(Vector3f inVecA, Vector3f inVecB)
@@ -484,9 +547,9 @@ Vector3f cross(Vector3f inVecA, Vector3f inVecB)
 
 
 template <class T>
-float dot(T inArgA, T inArgB)
+float dot(T inVecA, T inVecB)
 {
-	return result = inArgA.dot(inArgB);
+	return result = inVecA.dot(inVecB);
 }
 
 
