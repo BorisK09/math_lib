@@ -949,8 +949,8 @@ public:
 
 // Functions
 
-template<class inType, class outType>
-outType transpose(inType& inMat)
+template<class T>
+T transpose(T& mat)
 {
-	return inMat.transpose();
+	return mat.transpose();
 }

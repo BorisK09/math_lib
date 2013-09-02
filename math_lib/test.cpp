@@ -41,8 +41,7 @@ int main()
 	cout << matA.m[0][0] << " " << matA.m[0][1] << endl;
 	cout << matA.m[1][0] << " " << matA.m[1][1] << endl;
 
-	Matrix2x2f matB;
-	matB = transpose(matA);
+	matA = transpose(matA);
 
 	cout << endl;
 
