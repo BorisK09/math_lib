@@ -1,14 +1,14 @@
 #include <cmath>
 
 
-#pragma warning (disable:4305) // truncation from 'double' to 'const float'
+#pragma warning (disable:4305) // truncation from 'double' to 'float'
 
 
 class Vector2f
 {
 public:
 
-	static const unsigned int dimention = 2;
+	static const unsigned int dimension = 2;
 
 	union 
 	{
@@ -100,6 +100,13 @@ public:
 		return *this;
 	}
 
+	inline Vector2f& operator *= (const Vector2f& vec)
+	{
+		x *= vec.x;
+		y *= vec.y;
+		return *this;
+	}
+
 	inline Vector2f& operator *= (float val)
 	{
 		x *= val;
@@ -153,7 +160,7 @@ class Vector3f
 {
 public:
 
-	static const unsigned int dimention = 3;
+	static const unsigned int dimension = 3;
 
 	union 
 	{
@@ -252,6 +259,14 @@ public:
 		return *this;
 	}
 
+	inline Vector3f& operator *= (const Vector3f& vec)
+	{
+		x *= vec.x;
+		y *= vec.y;
+		z *= vec.z;
+		return *this;
+	}
+
 	inline Vector3f& operator *= (float val)
 	{
 		x *= val;
@@ -306,7 +321,7 @@ class Vector4f
 {
 public:
 
-	static const unsigned int dimention = 4;
+	static const unsigned int dimension = 4;
 
 	union 
 	{
@@ -414,6 +429,15 @@ public:
 		return *this;
 	}
 
+	inline Vector4f& operator *= (const Vector4f& vec)
+	{
+		x *= vec.x;
+		y *= vec.y;
+		z *= vec.z;
+		w *= vec.w;
+		return *this;
+	}
+
 	inline Vector4f& operator *= (float val)
 	{
 		x *= val;
@@ -465,31 +489,31 @@ public:
 };
 
 
-template <unsigned int _dimention> 
+template <unsigned int _dimension> 
 class VectorNf
 {
 public:
 
-	const unsigned int dimention;
+	const unsigned int dimension;
 
 	float* v;
 
 
 	// Constructors
 
-	VectorNf() : dimention(_dimention)
+	VectorNf() : dimension(_dimension)
 	{
-		//v = (float*)malloc(sizeof(float)*dimention);
-		v = new float[dimention];
-		memset(v, 0, sizeof(float)*dimention);
+		//v = (float*)malloc(sizeof(float)*dimension);
+		v = new float[dimension];
+		memset(v, 0, sizeof(float)*dimension);
 	}
 
-	VectorNf(const VectorNf &copy) : dimention(copy.dimention)
+	VectorNf(const VectorNf &copy) : dimension(copy.dimension)
 	{
-		//v = (float*)malloc(sizeof(float)*copy.dimention);
-		v = new float[copy.dimention];
-		memset(v, 0, sizeof(float)*dimention);
-		for(unsigned int i = 0; i < copy.dimention; i++)
+		//v = (float*)malloc(sizeof(float)*copy.dimension);
+		v = new float[copy.dimension];
+		memset(v, 0, sizeof(float)*dimension);
+		for(unsigned int i = 0; i < copy.dimension; i++)
 		{
 			v[i] = copy.v[i];
 		}
@@ -509,7 +533,7 @@ public:
 
 	VectorNf& operator = (const VectorNf &vec)
 	{
-		for(unsigned int i = 0; i < dimention; i++)
+		for(unsigned int i = 0; i < dimension; i++)
 		{
 			v[i] = vec.v[i];
 		}
@@ -523,15 +547,181 @@ public:
 
 	VectorNf operator - ()
 	{
-		VectorNf<_dimention> rVec;
-		for(unsigned int i = 0; i < dimention; i++)
+		VectorNf<_dimension> rVec;
+		for(unsigned int i = 0; i < dimension; i++)
 		{
 			rVec.v[i] = -v[i];
 		}
 		return rVec;
 	}
-};
 
+
+	// Binary operators
+
+	VectorNf operator + (const VectorNf& vec) const
+	{
+		VectorNf<_dimension> rVec;
+		for(unsigned int i = 0; i < dimension; i++)
+		{
+			rVec.v[i] = v[i] + vec.v[i];
+		}
+		return rVec;
+	}
+
+	VectorNf operator - (const VectorNf& vec) const
+	{
+		VectorNf<_dimension> rVec;
+		for(unsigned int i = 0; i < dimension; i++)
+		{
+			rVec.v[i] = v[i] - vec.v[i];
+		}
+		return rVec;
+	}
+
+	VectorNf operator * (float val) const
+	{
+		VectorNf<_dimension> rVec;
+		for(unsigned int i = 0; i < dimension; i++)
+		{
+			rVec.v[i] = v[i] * val;
+		}
+		return rVec;
+	}
+
+	VectorNf operator * (const VectorNf& vec) const
+	{
+		VectorNf<_dimension> rVec;
+		for(unsigned int i = 0; i < dimension; i++)
+		{
+			rVec.v[i] = v[i] * vec.v[i];
+		}
+		return rVec;
+	}
+
+	friend VectorNf operator * (float val, const VectorNf& vec)
+	{
+		VectorNf<_dimension> rVec;
+		for(unsigned int i = 0; i < dimension; i++)
+		{
+			rVec.v[i] = val * vec.v[i];
+		}
+		return rVec;
+	}
+
+    VectorNf operator / (float val) const
+	{
+		float invVal = 1.0f/val;
+		VectorNf<_dimension> rVec;
+		for(unsigned int i = 0; i < dimension; i++)
+		{
+			rVec.v[i] = v[i] * invVal;
+		}
+		return rVec;
+	}
+
+
+	// Assigment operators
+
+	VectorNf& operator += (const VectorNf& vec)
+	{
+		for(unsigned int i = 0; i < dimension; i++)
+		{
+			v[i] += vec.v[i];
+		}
+		return *this;
+	}
+
+	VectorNf& operator -= (const VectorNf& vec)
+	{
+		for(unsigned int i = 0; i < dimension; i++)
+		{
+			v[i] -= vec.v[i];
+		}
+		return *this;
+	}
+
+	VectorNf& operator *= (const VectorNf& vec)
+	{
+		for(unsigned int i = 0; i < dimension; i++)
+		{
+			v[i] *= vec.v[i];
+		}
+		return *this;
+	}
+
+	VectorNf& operator *= (float val)
+	{
+		for(unsigned int i = 0; i < dimension; i++)
+		{
+			v[i] *= val;
+		}
+		return *this;
+	}
+
+	VectorNf& operator /= (float val)
+	{
+		float invVal = 1.0f/val;
+		for(unsigned int i = 0; i < dimension; i++)
+		{
+			v[i] *= invVal;
+		}
+		return *this;
+	}
+
+
+	// Methods
+
+	float lenght()
+	{
+		float sum = 0; //v[0]^2 + v[1]^2 + ...
+		for(unsigned int i = 0; i < dimension; i++)
+		{
+			sum += v[i]*v[i];
+		}
+		return sqrt(sum);
+	}
+
+	float sqlenght()
+	{
+		float sum = 0;
+		for(unsigned int i = 0; i < dimension; i++)
+		{
+			sum += v[i]*v[i];
+		}
+		return sum;
+	}
+
+	VectorNf normalize()
+	{
+		float lenght = this->lenght();
+		VectorNf<_dimension> rVec;
+		if (lenght != 0) 
+		{
+			float invLenght = 1.0f/lenght;
+			for(unsigned int i = 0; i < dimension; i++)
+			{
+				rVec.v[i] = v[i]*invLenght;
+			}
+			return rVec;
+		} else { //return *this ?
+			for(unsigned int i = 0; i < dimension; i++)
+			{
+				rVec.v[i] = v[i];
+			}
+			return rVec;
+		}
+	}
+
+	float dot(const VectorNf& vec)
+	{
+		float sum = 0;
+		for(unsigned int i = 0; i < dimension; i++)
+		{
+			sum += v[i] * vec.v[i]
+		}
+		return sum;
+	}
+};
 
 
 Vector3f cross(Vector3f inVecA, Vector3f inVecB)
@@ -557,4 +747,210 @@ template <class T>
 T normalize(T inVec)
 {
 	return inVec.normalize();
+}
+
+
+
+// Matrices
+
+class Matrix2x2f
+{
+public:
+
+	static const unsigned int nRows = 2, nColumns = 2;
+
+	union
+	{
+		struct
+		{
+			float _m00, _m01,
+				  _m10, _m11;
+		};
+
+		struct
+		{
+			float _11, _12,
+				  _21, _22;
+		};
+
+		float m[2][2];
+
+		float mv[4];
+	};
+
+
+	// Constructors
+
+	Matrix2x2f() : _m00(0), _m01(0),
+		           _m10(0), _m11(0) {}
+
+	Matrix2x2f(float in_m00, float in_m01,
+		       float in_m10, float in_m11) : _m00(in_m00), _m01(in_m01),
+		                                     _m10(in_m10), _m11(in_m11) {}
+
+
+	// Copy
+
+	inline Matrix2x2f& operator = (const Matrix2x2f &mat)
+	{
+		_m00 = mat._m00;
+		_m01 = mat._m01;
+		_m10 = mat._m10;
+		_m11 = mat._m11;
+		return *this;
+	}
+
+
+	// Unary operators
+
+	inline Matrix2x2f operator + () const { return *this; }
+
+	inline Matrix2x2f operator - () const 
+	{
+		return Matrix2x2f(-_m00, -_m01,
+			              -_m10, -_m11);
+	}
+
+
+	// Binary operators
+
+	inline Matrix2x2f operator + (const Matrix2x2f& mat) const
+	{
+		return Matrix2x2f(_m00 + mat._m00, _m01 + mat._m01,
+			              _m10 + mat._m10, _m11 + mat._m11);
+	}
+
+    inline Matrix2x2f operator - (const Matrix2x2f& mat) const
+	{
+		return Matrix2x2f(_m00 - mat._m00, _m01 - mat._m01,
+			              _m10 - mat._m10, _m11 - mat._m11);
+	}
+
+    inline Matrix2x2f operator * (float val) const
+	{
+		return Matrix2x2f(_m00 * val, _m01 * val,
+			              _m10 * val, _m11 * val);
+	}
+
+	friend Matrix2x2f operator * (float val, const Matrix2x2f& mat)
+	{
+		return Matrix2x2f(mat._m00 * val, mat._m01 * val,
+			              mat._m10 * val, mat._m11 * val);
+	}
+
+	inline Vector2f operator * (const Vector2f& vec) const
+	{
+		return Vector2f(_m00*vec.x + _m01*vec.y,
+			            _m10*vec.x + _m11*vec.y);
+	}
+
+	friend Vector2f operator * (const Vector2f& vec, const Matrix2x2f& mat)
+	{
+		return Vector2f(vec.x*mat._m00 + vec.y*mat._m10,
+			            vec.x*mat._m01 + vec.y*mat._m11);
+	}
+
+	inline Matrix2x2f operator * (const Matrix2x2f& mat) const
+	{
+		Matrix2x2f rMat;
+
+		rMat._m00 = _m00*mat._m00 + _m01*mat._m10;
+		rMat._m01 = _m00*mat._m01 + _m01*mat._m11;
+		rMat._m10 = _m10*mat._m00 + _m11*mat._m10;
+		rMat._m11 = _m10*mat._m01 + _m11*mat._m11;
+
+		return rMat;
+	}
+
+	inline Matrix2x2f operator / (float val) const
+	{
+		float invVal = 1.0f/val;
+		return Matrix2x2f(_m00 * invVal, _m01 * invVal,
+			              _m10 * invVal, _m11 * invVal);
+	}
+
+
+	// Assigment operators
+
+	inline Matrix2x2f& operator += (const Matrix2x2f& mat)
+	{
+		_m00 += mat._m00;
+		_m01 += mat._m01;
+		_m10 += mat._m10;
+		_m11 += mat._m11;
+		return *this;
+	}
+
+	inline Matrix2x2f& operator -= (const Matrix2x2f& mat)
+	{
+		_m00 -= mat._m00;
+		_m01 -= mat._m01;
+		_m10 -= mat._m10;
+		_m11 -= mat._m11;
+		return *this;
+	}
+
+    inline Matrix2x2f& operator *= (float val)
+	{
+		_m00 *= val;
+		_m01 *= val;
+		_m10 *= val;
+		_m11 *= val;
+		return *this;
+	}
+
+	inline Matrix2x2f& operator *= (const Matrix2x2f& mat)
+	{
+		_m00 = _m00*mat._m00 + _m01*mat._m10;
+		_m01 = _m00*mat._m01 + _m01*mat._m11;
+		_m10 = _m10*mat._m00 + _m11*mat._m10;
+		_m11 = _m10*mat._m01 + _m11*mat._m11;
+		return *this;
+	}
+
+	inline Matrix2x2f& operator /= (float val)
+	{
+		float invVal = 1.0f/val;
+		_m00 *= invVal;
+		_m01 *= invVal;
+		_m10 *= invVal;
+		_m11 *= invVal;
+		return *this;
+	}
+
+
+	// Methods
+	inline Matrix2x2f& setZero()
+	{
+		_m00 = 0;
+		_m01 = 0;
+		_m10 = 0;
+		_m11 = 0;
+		return *this;
+	}
+
+	inline Matrix2x2f& setIdentity()
+	{
+		_m00 = 1.0f;
+		_m01 = 0;
+		_m10 = 0;
+		_m11 = 1.0f;
+		return *this;
+	}
+
+	inline Matrix2x2f transpose() const
+	{
+		return Matrix2x2f(_m00, _m10,
+			              _m01, _m11);
+	} 
+};
+
+
+
+// Functions
+
+template<class inType, class outType>
+outType transpose(inType& inMat)
+{
+	return inMat.transpose();
 }
