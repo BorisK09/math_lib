@@ -184,18 +184,6 @@
 				RelativePath=".\math.h"
 				>
 			</File>
-			<File
-				RelativePath=".\math_tmp_1.h"
-				>
-			</File>
-			<File
-				RelativePath=".\math_tmp_2.h"
-				>
-			</File>
-			<File
-				RelativePath=".\utils.h"
-				>
-			</File>
 		</Filter>
 		<Filter
 			Name="Файлы ресурсов"
