@@ -5,10 +5,13 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "math_lib", "math_lib\math_l
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug_64|Win32 = Debug_64|Win32
 		Debug|Win32 = Debug|Win32
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05725D2C-E48C-498A-9803-B09D1C29F35C}.Debug_64|Win32.ActiveCfg = Release|Win32
+		{05725D2C-E48C-498A-9803-B09D1C29F35C}.Debug_64|Win32.Build.0 = Release|Win32
 		{05725D2C-E48C-498A-9803-B09D1C29F35C}.Debug|Win32.ActiveCfg = Debug|Win32
 		{05725D2C-E48C-498A-9803-B09D1C29F35C}.Debug|Win32.Build.0 = Debug|Win32
 		{05725D2C-E48C-498A-9803-B09D1C29F35C}.Release|Win32.ActiveCfg = Release|Win32

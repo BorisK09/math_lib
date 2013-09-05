@@ -1,9 +1,11 @@
 #include <iostream>
-#include "math.h"
-#include "windows.h"
+
+#include "h2_math.h"
 
 
 using namespace std;
+
+using namespace h2;
 
 
 int main()
@@ -47,11 +49,15 @@ int main()
 
 	matB.setIdentity();
 
+	matB.transpose();
+
 	matB = matA;
 
 	cout << matB.m[0][0] << " " << matB.m[0][1] << " " << matB.m[0][2] << endl;
 	cout << matB.m[1][0] << " " << matB.m[1][1] << " " << matB.m[1][2] << endl;
 	cout << matB.m[2][0] << " " << matB.m[2][1] << " " << matB.m[2][2] << endl;
+
+	Matrix4x4f matC;
 
 	return 0;
 }

@@ -1,0 +1,373 @@
+\hypertarget{classh2_1_1_vector2f}{\section{h2\-:\-:Vector2f Class Reference}
+\label{classh2_1_1_vector2f}\index{h2\-::\-Vector2f@{h2\-::\-Vector2f}}
+}
+
+
+{\ttfamily \#include $<$h2\-\_\-vector2.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classh2_1_1_vector2f_a03be150d62726e052a80904ce4c785d8}{Vector2f} ()
+\item 
+\hyperlink{classh2_1_1_vector2f_aec8acd7793b90c64077eded2d9e633b0}{Vector2f} (const float \hyperlink{classh2_1_1_vector2f_a39a782153c3a3b1bcec9803a609a96fb}{x}, const float \hyperlink{classh2_1_1_vector2f_ae38b4f697aa2273f1b5b4adf04ac949e}{y})
+\item 
+\hyperlink{classh2_1_1_vector2f_a3f2637d2bf79b07a4040067233cc148e}{Vector2f} (const float $\ast$arr)
+\item 
+{\footnotesize template$<$class Vec\-Type $>$ }\\\hyperlink{classh2_1_1_vector2f_afda46e7d6426ddd204c4386ddab71d45}{Vector2f} (Vec\-Type const \&vec)
+\item 
+\hyperlink{classh2_1_1_vector2f}{Vector2f} \& \hyperlink{classh2_1_1_vector2f_a1261d403c1495e6c96e98664c88c92cb}{operator=} (const \hyperlink{classh2_1_1_vector2f}{Vector2f} \&vec)
+\item 
+\hyperlink{classh2_1_1_vector2f}{Vector2f} \hyperlink{classh2_1_1_vector2f_a0fc8b8e3d43d36125e09fc787f958094}{operator+} () const 
+\item 
+\hyperlink{classh2_1_1_vector2f}{Vector2f} \hyperlink{classh2_1_1_vector2f_a986d4ffa310b4fa674cf49806aa93f75}{operator-\/} () const 
+\item 
+\hyperlink{classh2_1_1_vector2f}{Vector2f} \hyperlink{classh2_1_1_vector2f_af3910cc769ea596129a54a103f74cd94}{operator+} (const \hyperlink{classh2_1_1_vector2f}{Vector2f} \&vec) const 
+\item 
+\hyperlink{classh2_1_1_vector2f}{Vector2f} \hyperlink{classh2_1_1_vector2f_acfd3d2a80731fbb26c3613c05c77bc91}{operator-\/} (const \hyperlink{classh2_1_1_vector2f}{Vector2f} \&vec) const 
+\item 
+\hyperlink{classh2_1_1_vector2f}{Vector2f} \hyperlink{classh2_1_1_vector2f_a499ef9942d6f5762fa225bcd8b6ed25b}{operator$\ast$} (float val) const 
+\item 
+\hyperlink{classh2_1_1_vector2f}{Vector2f} \hyperlink{classh2_1_1_vector2f_ab9bb7a389fd6ac9a9c37d176ac563b37}{operator$\ast$} (const \hyperlink{classh2_1_1_vector2f}{Vector2f} \&vec) const 
+\item 
+\hyperlink{classh2_1_1_vector2f}{Vector2f} \hyperlink{classh2_1_1_vector2f_a7eec76ff71312f3c1d433bb75dda4cbd}{operator/} (float val) const 
+\item 
+\hyperlink{classh2_1_1_vector2f}{Vector2f} \& \hyperlink{classh2_1_1_vector2f_a76cfbfe5e313838b41db65cde83405cc}{operator+=} (const \hyperlink{classh2_1_1_vector2f}{Vector2f} \&vec)
+\item 
+\hyperlink{classh2_1_1_vector2f}{Vector2f} \& \hyperlink{classh2_1_1_vector2f_a081ae075edaeace09fcfdc8bef5ea731}{operator-\/=} (const \hyperlink{classh2_1_1_vector2f}{Vector2f} \&vec)
+\item 
+\hyperlink{classh2_1_1_vector2f}{Vector2f} \& \hyperlink{classh2_1_1_vector2f_af25386b052dc1ee07bff8705ac03a05e}{operator$\ast$=} (const \hyperlink{classh2_1_1_vector2f}{Vector2f} \&vec)
+\item 
+\hyperlink{classh2_1_1_vector2f}{Vector2f} \& \hyperlink{classh2_1_1_vector2f_adedd26fe6446f9ebc0cebd752adcb0e3}{operator$\ast$=} (float val)
+\item 
+\hyperlink{classh2_1_1_vector2f}{Vector2f} \& \hyperlink{classh2_1_1_vector2f_a0279cd16573eb44d7d2c9da00b6d0795}{operator/=} (float val)
+\item 
+float \hyperlink{classh2_1_1_vector2f_ae5afbc0ba66ef74fe26e2035b9f76f45}{lenght} ()
+\item 
+float \hyperlink{classh2_1_1_vector2f_afa253aec68ca9e8b5cae30821d81ed38}{sqlenght} ()
+\item 
+\hyperlink{classh2_1_1_vector2f}{Vector2f} \hyperlink{classh2_1_1_vector2f_adf26db8f0a58623042415ccc69acc67b}{normalize} ()
+\item 
+float \hyperlink{classh2_1_1_vector2f_af23d1cd7e75575b3ab103e12b021bb35}{dot} (const \hyperlink{classh2_1_1_vector2f}{Vector2f} \&vec)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>float \hyperlink{classh2_1_1_vector2f_a39a782153c3a3b1bcec9803a609a96fb}{x}\\
+\>\>float \hyperlink{classh2_1_1_vector2f_ae38b4f697aa2273f1b5b4adf04ac949e}{y}\\
+\>\} \\
+\>float \hyperlink{classh2_1_1_vector2f_a0a3245e21b0f085c337587457de201de}{v} \mbox{[}2\mbox{]}\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const unsigned int \hyperlink{classh2_1_1_vector2f_a085b562acedcfb84195a5ef60b742df8}{dimension} = 2
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classh2_1_1_vector2f}{Vector2f} \hyperlink{classh2_1_1_vector2f_a9049a4ebad6647c34f6598fb394974e8}{operator$\ast$} (float val, const \hyperlink{classh2_1_1_vector2f}{Vector2f} \&vec)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 10 of file h2\-\_\-vector2.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classh2_1_1_vector2f_a03be150d62726e052a80904ce4c785d8}{\index{h2\-::\-Vector2f@{h2\-::\-Vector2f}!Vector2f@{Vector2f}}
+\index{Vector2f@{Vector2f}!h2::Vector2f@{h2\-::\-Vector2f}}
+\subsubsection[{Vector2f}]{\setlength{\rightskip}{0pt plus 5cm}h2\-::\-Vector2f\-::\-Vector2f (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classh2_1_1_vector2f_a03be150d62726e052a80904ce4c785d8}
+
+
+Definition at line 29 of file h2\-\_\-vector2.\-h.
+
+\hypertarget{classh2_1_1_vector2f_aec8acd7793b90c64077eded2d9e633b0}{\index{h2\-::\-Vector2f@{h2\-::\-Vector2f}!Vector2f@{Vector2f}}
+\index{Vector2f@{Vector2f}!h2::Vector2f@{h2\-::\-Vector2f}}
+\subsubsection[{Vector2f}]{\setlength{\rightskip}{0pt plus 5cm}h2\-::\-Vector2f\-::\-Vector2f (
+\begin{DoxyParamCaption}
+\item[{const float}]{x, }
+\item[{const float}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classh2_1_1_vector2f_aec8acd7793b90c64077eded2d9e633b0}
+
+
+Definition at line 31 of file h2\-\_\-vector2.\-h.
+
+\hypertarget{classh2_1_1_vector2f_a3f2637d2bf79b07a4040067233cc148e}{\index{h2\-::\-Vector2f@{h2\-::\-Vector2f}!Vector2f@{Vector2f}}
+\index{Vector2f@{Vector2f}!h2::Vector2f@{h2\-::\-Vector2f}}
+\subsubsection[{Vector2f}]{\setlength{\rightskip}{0pt plus 5cm}h2\-::\-Vector2f\-::\-Vector2f (
+\begin{DoxyParamCaption}
+\item[{const float $\ast$}]{arr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classh2_1_1_vector2f_a3f2637d2bf79b07a4040067233cc148e}
+
+
+Definition at line 33 of file h2\-\_\-vector2.\-h.
+
+\hypertarget{classh2_1_1_vector2f_afda46e7d6426ddd204c4386ddab71d45}{\index{h2\-::\-Vector2f@{h2\-::\-Vector2f}!Vector2f@{Vector2f}}
+\index{Vector2f@{Vector2f}!h2::Vector2f@{h2\-::\-Vector2f}}
+\subsubsection[{Vector2f}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Vec\-Type $>$ h2\-::\-Vector2f\-::\-Vector2f (
+\begin{DoxyParamCaption}
+\item[{Vec\-Type const \&}]{vec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classh2_1_1_vector2f_afda46e7d6426ddd204c4386ddab71d45}
+
+
+Definition at line 36 of file h2\-\_\-vector2.\-h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classh2_1_1_vector2f_af23d1cd7e75575b3ab103e12b021bb35}{\index{h2\-::\-Vector2f@{h2\-::\-Vector2f}!dot@{dot}}
+\index{dot@{dot}!h2::Vector2f@{h2\-::\-Vector2f}}
+\subsubsection[{dot}]{\setlength{\rightskip}{0pt plus 5cm}float h2\-::\-Vector2f\-::dot (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector2f} \&}]{vec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classh2_1_1_vector2f_af23d1cd7e75575b3ab103e12b021bb35}
+
+
+Definition at line 154 of file h2\-\_\-vector2.\-h.
+
+\hypertarget{classh2_1_1_vector2f_ae5afbc0ba66ef74fe26e2035b9f76f45}{\index{h2\-::\-Vector2f@{h2\-::\-Vector2f}!lenght@{lenght}}
+\index{lenght@{lenght}!h2::Vector2f@{h2\-::\-Vector2f}}
+\subsubsection[{lenght}]{\setlength{\rightskip}{0pt plus 5cm}float h2\-::\-Vector2f\-::lenght (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classh2_1_1_vector2f_ae5afbc0ba66ef74fe26e2035b9f76f45}
+
+
+Definition at line 131 of file h2\-\_\-vector2.\-h.
+
+\hypertarget{classh2_1_1_vector2f_adf26db8f0a58623042415ccc69acc67b}{\index{h2\-::\-Vector2f@{h2\-::\-Vector2f}!normalize@{normalize}}
+\index{normalize@{normalize}!h2::Vector2f@{h2\-::\-Vector2f}}
+\subsubsection[{normalize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector2f} h2\-::\-Vector2f\-::normalize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classh2_1_1_vector2f_adf26db8f0a58623042415ccc69acc67b}
+
+
+Definition at line 141 of file h2\-\_\-vector2.\-h.
+
+\hypertarget{classh2_1_1_vector2f_a499ef9942d6f5762fa225bcd8b6ed25b}{\index{h2\-::\-Vector2f@{h2\-::\-Vector2f}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!h2::Vector2f@{h2\-::\-Vector2f}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector2f} h2\-::\-Vector2f\-::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{float}]{val}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classh2_1_1_vector2f_a499ef9942d6f5762fa225bcd8b6ed25b}
+
+
+Definition at line 68 of file h2\-\_\-vector2.\-h.
+
+\hypertarget{classh2_1_1_vector2f_ab9bb7a389fd6ac9a9c37d176ac563b37}{\index{h2\-::\-Vector2f@{h2\-::\-Vector2f}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!h2::Vector2f@{h2\-::\-Vector2f}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector2f} h2\-::\-Vector2f\-::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector2f} \&}]{vec}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classh2_1_1_vector2f_ab9bb7a389fd6ac9a9c37d176ac563b37}
+
+
+Definition at line 73 of file h2\-\_\-vector2.\-h.
+
+\hypertarget{classh2_1_1_vector2f_af25386b052dc1ee07bff8705ac03a05e}{\index{h2\-::\-Vector2f@{h2\-::\-Vector2f}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!h2::Vector2f@{h2\-::\-Vector2f}}
+\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector2f}\& h2\-::\-Vector2f\-::operator$\ast$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector2f} \&}]{vec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classh2_1_1_vector2f_af25386b052dc1ee07bff8705ac03a05e}
+
+
+Definition at line 106 of file h2\-\_\-vector2.\-h.
+
+\hypertarget{classh2_1_1_vector2f_adedd26fe6446f9ebc0cebd752adcb0e3}{\index{h2\-::\-Vector2f@{h2\-::\-Vector2f}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!h2::Vector2f@{h2\-::\-Vector2f}}
+\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector2f}\& h2\-::\-Vector2f\-::operator$\ast$= (
+\begin{DoxyParamCaption}
+\item[{float}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classh2_1_1_vector2f_adedd26fe6446f9ebc0cebd752adcb0e3}
+
+
+Definition at line 113 of file h2\-\_\-vector2.\-h.
+
+\hypertarget{classh2_1_1_vector2f_a0fc8b8e3d43d36125e09fc787f958094}{\index{h2\-::\-Vector2f@{h2\-::\-Vector2f}!operator+@{operator+}}
+\index{operator+@{operator+}!h2::Vector2f@{h2\-::\-Vector2f}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector2f} h2\-::\-Vector2f\-::operator+ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classh2_1_1_vector2f_a0fc8b8e3d43d36125e09fc787f958094}
+
+
+Definition at line 51 of file h2\-\_\-vector2.\-h.
+
+\hypertarget{classh2_1_1_vector2f_af3910cc769ea596129a54a103f74cd94}{\index{h2\-::\-Vector2f@{h2\-::\-Vector2f}!operator+@{operator+}}
+\index{operator+@{operator+}!h2::Vector2f@{h2\-::\-Vector2f}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector2f} h2\-::\-Vector2f\-::operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector2f} \&}]{vec}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classh2_1_1_vector2f_af3910cc769ea596129a54a103f74cd94}
+
+
+Definition at line 58 of file h2\-\_\-vector2.\-h.
+
+\hypertarget{classh2_1_1_vector2f_a76cfbfe5e313838b41db65cde83405cc}{\index{h2\-::\-Vector2f@{h2\-::\-Vector2f}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!h2::Vector2f@{h2\-::\-Vector2f}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector2f}\& h2\-::\-Vector2f\-::operator+= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector2f} \&}]{vec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classh2_1_1_vector2f_a76cfbfe5e313838b41db65cde83405cc}
+
+
+Definition at line 92 of file h2\-\_\-vector2.\-h.
+
+\hypertarget{classh2_1_1_vector2f_a986d4ffa310b4fa674cf49806aa93f75}{\index{h2\-::\-Vector2f@{h2\-::\-Vector2f}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!h2::Vector2f@{h2\-::\-Vector2f}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector2f} h2\-::\-Vector2f\-::operator-\/ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classh2_1_1_vector2f_a986d4ffa310b4fa674cf49806aa93f75}
+
+
+Definition at line 53 of file h2\-\_\-vector2.\-h.
+
+\hypertarget{classh2_1_1_vector2f_acfd3d2a80731fbb26c3613c05c77bc91}{\index{h2\-::\-Vector2f@{h2\-::\-Vector2f}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!h2::Vector2f@{h2\-::\-Vector2f}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector2f} h2\-::\-Vector2f\-::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector2f} \&}]{vec}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classh2_1_1_vector2f_acfd3d2a80731fbb26c3613c05c77bc91}
+
+
+Definition at line 63 of file h2\-\_\-vector2.\-h.
+
+\hypertarget{classh2_1_1_vector2f_a081ae075edaeace09fcfdc8bef5ea731}{\index{h2\-::\-Vector2f@{h2\-::\-Vector2f}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!h2::Vector2f@{h2\-::\-Vector2f}}
+\subsubsection[{operator-\/=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector2f}\& h2\-::\-Vector2f\-::operator-\/= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector2f} \&}]{vec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classh2_1_1_vector2f_a081ae075edaeace09fcfdc8bef5ea731}
+
+
+Definition at line 99 of file h2\-\_\-vector2.\-h.
+
+\hypertarget{classh2_1_1_vector2f_a7eec76ff71312f3c1d433bb75dda4cbd}{\index{h2\-::\-Vector2f@{h2\-::\-Vector2f}!operator/@{operator/}}
+\index{operator/@{operator/}!h2::Vector2f@{h2\-::\-Vector2f}}
+\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector2f} h2\-::\-Vector2f\-::operator/ (
+\begin{DoxyParamCaption}
+\item[{float}]{val}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classh2_1_1_vector2f_a7eec76ff71312f3c1d433bb75dda4cbd}
+
+
+Definition at line 83 of file h2\-\_\-vector2.\-h.
+
+\hypertarget{classh2_1_1_vector2f_a0279cd16573eb44d7d2c9da00b6d0795}{\index{h2\-::\-Vector2f@{h2\-::\-Vector2f}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!h2::Vector2f@{h2\-::\-Vector2f}}
+\subsubsection[{operator/=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector2f}\& h2\-::\-Vector2f\-::operator/= (
+\begin{DoxyParamCaption}
+\item[{float}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classh2_1_1_vector2f_a0279cd16573eb44d7d2c9da00b6d0795}
+
+
+Definition at line 120 of file h2\-\_\-vector2.\-h.
+
+\hypertarget{classh2_1_1_vector2f_a1261d403c1495e6c96e98664c88c92cb}{\index{h2\-::\-Vector2f@{h2\-::\-Vector2f}!operator=@{operator=}}
+\index{operator=@{operator=}!h2::Vector2f@{h2\-::\-Vector2f}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector2f}\& h2\-::\-Vector2f\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector2f} \&}]{vec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classh2_1_1_vector2f_a1261d403c1495e6c96e98664c88c92cb}
+
+
+Definition at line 41 of file h2\-\_\-vector2.\-h.
+
+\hypertarget{classh2_1_1_vector2f_afa253aec68ca9e8b5cae30821d81ed38}{\index{h2\-::\-Vector2f@{h2\-::\-Vector2f}!sqlenght@{sqlenght}}
+\index{sqlenght@{sqlenght}!h2::Vector2f@{h2\-::\-Vector2f}}
+\subsubsection[{sqlenght}]{\setlength{\rightskip}{0pt plus 5cm}float h2\-::\-Vector2f\-::sqlenght (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classh2_1_1_vector2f_afa253aec68ca9e8b5cae30821d81ed38}
+
+
+Definition at line 136 of file h2\-\_\-vector2.\-h.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classh2_1_1_vector2f_a9049a4ebad6647c34f6598fb394974e8}{\index{h2\-::\-Vector2f@{h2\-::\-Vector2f}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!h2::Vector2f@{h2\-::\-Vector2f}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector2f} operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{float}]{val, }
+\item[{const {\bf Vector2f} \&}]{vec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classh2_1_1_vector2f_a9049a4ebad6647c34f6598fb394974e8}
+
+
+Definition at line 78 of file h2\-\_\-vector2.\-h.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classh2_1_1_vector2f_a1041c28263e95def802f31fc8263f5f0}{\subsubsection[{"@13}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \} }}\label{classh2_1_1_vector2f_a1041c28263e95def802f31fc8263f5f0}
+\hypertarget{classh2_1_1_vector2f_a085b562acedcfb84195a5ef60b742df8}{\index{h2\-::\-Vector2f@{h2\-::\-Vector2f}!dimension@{dimension}}
+\index{dimension@{dimension}!h2::Vector2f@{h2\-::\-Vector2f}}
+\subsubsection[{dimension}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int h2\-::\-Vector2f\-::dimension = 2\hspace{0.3cm}{\ttfamily [static]}}}\label{classh2_1_1_vector2f_a085b562acedcfb84195a5ef60b742df8}
+
+
+Definition at line 14 of file h2\-\_\-vector2.\-h.
+
+\hypertarget{classh2_1_1_vector2f_a0a3245e21b0f085c337587457de201de}{\index{h2\-::\-Vector2f@{h2\-::\-Vector2f}!v@{v}}
+\index{v@{v}!h2::Vector2f@{h2\-::\-Vector2f}}
+\subsubsection[{v}]{\setlength{\rightskip}{0pt plus 5cm}float h2\-::\-Vector2f\-::v\mbox{[}2\mbox{]}}}\label{classh2_1_1_vector2f_a0a3245e21b0f085c337587457de201de}
+
+
+Definition at line 23 of file h2\-\_\-vector2.\-h.
+
+\hypertarget{classh2_1_1_vector2f_a39a782153c3a3b1bcec9803a609a96fb}{\index{h2\-::\-Vector2f@{h2\-::\-Vector2f}!x@{x}}
+\index{x@{x}!h2::Vector2f@{h2\-::\-Vector2f}}
+\subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}float h2\-::\-Vector2f\-::x}}\label{classh2_1_1_vector2f_a39a782153c3a3b1bcec9803a609a96fb}
+
+
+Definition at line 20 of file h2\-\_\-vector2.\-h.
+
+\hypertarget{classh2_1_1_vector2f_ae38b4f697aa2273f1b5b4adf04ac949e}{\index{h2\-::\-Vector2f@{h2\-::\-Vector2f}!y@{y}}
+\index{y@{y}!h2::Vector2f@{h2\-::\-Vector2f}}
+\subsubsection[{y}]{\setlength{\rightskip}{0pt plus 5cm}float h2\-::\-Vector2f\-::y}}\label{classh2_1_1_vector2f_ae38b4f697aa2273f1b5b4adf04ac949e}
+
+
+Definition at line 20 of file h2\-\_\-vector2.\-h.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{h2__vector2_8h}{h2\-\_\-vector2.\-h}\end{DoxyCompactItemize}

@@ -181,7 +181,43 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
-				RelativePath=".\math.h"
+				RelativePath=".\h2_math.h"
+				>
+			</File>
+			<File
+				RelativePath=".\h2_matrix2x2.h"
+				>
+			</File>
+			<File
+				RelativePath=".\h2_matrix3x3.h"
+				>
+			</File>
+			<File
+				RelativePath=".\h2_matrix4x4.h"
+				>
+			</File>
+			<File
+				RelativePath=".\h2_matrixmxn.h"
+				>
+			</File>
+			<File
+				RelativePath=".\h2_quaternion.h"
+				>
+			</File>
+			<File
+				RelativePath=".\h2_vector2.h"
+				>
+			</File>
+			<File
+				RelativePath=".\h2_vector3.h"
+				>
+			</File>
+			<File
+				RelativePath=".\h2_vector4.h"
+				>
+			</File>
+			<File
+				RelativePath=".\h2_vectorn.h"
 				>
 			</File>
 		</Filter>
