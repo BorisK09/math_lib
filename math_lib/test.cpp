@@ -6,7 +6,6 @@
 using namespace std;
 
 
-
 int main()
 {
 	Vector2f vecB(1.1f, 2.2f), vecD(3.9f, 2.8f);
